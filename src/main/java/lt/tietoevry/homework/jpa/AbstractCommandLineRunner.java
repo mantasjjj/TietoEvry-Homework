@@ -2,7 +2,6 @@ package lt.tietoevry.homework.jpa;
 
 import lombok.RequiredArgsConstructor;
 import lt.tietoevry.homework.service.ItemService;
-import lt.tietoevry.homework.utils.ItemUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -11,11 +10,12 @@ import org.springframework.stereotype.Component;
 
 import java.io.FileReader;
 
+import static lt.tietoevry.homework.utils.ItemUtils.parseItemObject;
+
 @Component
 @RequiredArgsConstructor
 public class AbstractCommandLineRunner implements CommandLineRunner {
     private final ItemService itemService;
-    private final ItemUtils itemUtils;
 
     @Override
     public void run(String... args) {
@@ -29,7 +29,7 @@ public class AbstractCommandLineRunner implements CommandLineRunner {
             Object obj = jsonParser.parse(reader);
             JSONArray jsonItems = (JSONArray) obj;
 
-            jsonItems.forEach(item -> itemService.add(itemUtils.parseItemObject((JSONObject) item)));
+            jsonItems.forEach(item -> itemService.add(parseItemObject((JSONObject) item)));
         } catch (Exception e) {
             e.printStackTrace();
         }

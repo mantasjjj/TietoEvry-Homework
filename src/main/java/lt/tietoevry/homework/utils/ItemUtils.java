@@ -1,16 +1,17 @@
 package lt.tietoevry.homework.utils;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import lt.tietoevry.homework.model.Item;
 import lt.tietoevry.homework.model.Season;
 import org.json.simple.JSONObject;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ItemUtils {
-    public Item parseItemObject(JSONObject item) {
+    public static Item parseItemObject(JSONObject item) {
         JSONObject itemObject = (JSONObject) item.get("item");
         return Item.builder()
                 .name((String) itemObject.get("name"))
@@ -21,7 +22,7 @@ public class ItemUtils {
                 .build();
     }
 
-    public List<Season> getSeasonList(List<String> strings) {
+    public static List<Season> getSeasonList(List<String> strings) {
         return strings.stream()
                 .map(Season::valueOf)
                 .collect(Collectors.toList());

@@ -1,9 +1,9 @@
 package lt.tietoevry.homework.service;
 
 import lombok.RequiredArgsConstructor;
-import lt.tietoevry.homework.repository.ItemRepository;
 import lt.tietoevry.homework.model.Item;
 import lt.tietoevry.homework.model.Season;
+import lt.tietoevry.homework.repository.ItemRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +27,7 @@ public class ItemService {
                         i.getSeasons() != null && i.getSeasons().stream().anyMatch(seasons::contains))
                 .peek(i -> {
                     if (Boolean.TRUE.equals(i.getDuplicatesNeeded())) {
-                        i.setQuantity(i.getQuantity() * (nights == 0 ? 1 : nights));
+                        i.setQuantity(i.getQuantity() * (nights != 0 ? nights : 1));
                     }
                 })
                 .collect(Collectors.toMap(Item::getName, Item::getQuantity));

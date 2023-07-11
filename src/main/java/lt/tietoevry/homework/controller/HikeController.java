@@ -28,6 +28,10 @@ public class HikeController {
     public final NightService nightCalculator;
 
     //TODO:
+    //separate entities from model in model package, for example:
+        // db/model has Item and Season
+        // api/model has HikeResponse
+        // etc.
     //possibility to add basic authentication
     //possibility to add rate limiter
     @GetMapping("/items")
