@@ -19,7 +19,7 @@ The application includes a Swagger UI that can be accessed at http://localhost:8
 
 You can also call the endpoint using any API platform that supports endpoint calls, such as Postman. Here is an example curl command:
 ```
-curl -X 'GET'
-\'http://localhost:8080/api/hike/items?kilometers=100&startDate=2023-07-10'
-\ -H 'accept: */*'
+curl -X 'GET' \
+  'http://localhost:8081/api/hike/items?kilometers=100&startDate=2023-11-30' \
+  -H 'accept: */*'
 ```
