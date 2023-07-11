@@ -1,0 +1,145 @@
+[
+  {
+    "item": {
+      "name": "Sunglasses",
+      "season": [
+        "SUMMER",
+        "SPRING"
+      ],
+      "quantity": 1,
+      "nightMinimum": 0,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Umbrella",
+      "season": [
+        "AUTUMN"
+      ],
+      "quantity": 1,
+      "nightMinimum": 0,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Sunscreen",
+      "season": [
+        "SUMMER"
+      ],
+      "quantity": 1,
+      "nightMinimum": 0,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Tissues",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 3,
+      "nightMinimum": 0,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Warm clothes",
+      "season": [
+        "WINTER"
+      ],
+      "quantity": 1,
+      "nightMinimum": 0,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Lighter",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 2,
+      "nightMinimum": 0,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Toilet paper",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 1,
+      "nightMinimum": 0,
+      "duplicatesNeeded": true
+    }
+  },
+  {
+    "item": {
+      "name": "Socks",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 1,
+      "nightMinimum": 0,
+      "duplicatesNeeded": true
+    }
+  },
+  {
+    "item": {
+      "name": "Toothpaste",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 1,
+      "nightMinimum": 1,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Toothbrush",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 1,
+      "nightMinimum": 1,
+      "duplicatesNeeded": false
+    }
+  },
+  {
+    "item": {
+      "name": "Tent",
+      "season": [
+        "WINTER",
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "quantity": 1,
+      "nightMinimum": 1,
+      "duplicatesNeeded": false
+    }
+  }
+]
