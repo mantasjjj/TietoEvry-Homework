@@ -4,14 +4,17 @@ import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.constraints.Min;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lt.tietoevry.homework.service.MealService;
 import lt.tietoevry.homework.model.HikeResponse;
 import lt.tietoevry.homework.model.Season;
 import lt.tietoevry.homework.service.ItemService;
+import lt.tietoevry.homework.service.MealService;
 import lt.tietoevry.homework.service.NightService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.util.Map;
@@ -24,6 +27,9 @@ public class HikeController {
     public final MealService mealCalculator;
     public final NightService nightCalculator;
 
+    //TODO:
+    //possibility to add basic authentication
+    //possibility to add rate limiter
     @GetMapping("/items")
     @Operation(summary = "Find the duration of your hike, the number of meals and items needed to pack.")
     public ResponseEntity<HikeResponse> getItemsForHike(@RequestParam
@@ -45,7 +51,4 @@ public class HikeController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-    //todo:
-    //Pridet kazkokias konfiguracijas duombazeje?
 }
